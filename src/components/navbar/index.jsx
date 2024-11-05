@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Dropdown from "components/dropdown";
 import { FiAlignJustify } from "react-icons/fi";
 import { Link } from "react-router-dom";
@@ -13,9 +13,14 @@ import {
 import avatar from "assets/img/avatars/avatar4.png";
 
 const Navbar = (props) => {
-  const { onOpenSidenav, brandText } = props;
-  const [darkmode, setDarkmode] = React.useState(false);
-
+  const { onOpenSidenav, brandText } = props; 
+  const [darkmode, setDarkmode] = React.useState(localStorage.getItem('darkTheme') ==='true' ? true :  false);
+  
+  useEffect(()=>{
+    if(darkmode){
+      document.body.classList.add("dark");
+    }
+  })
   return (
     <nav className="sticky top-4 z-40 flex flex-row flex-wrap items-center justify-between rounded-xl bg-white/10 p-2 backdrop-blur-xl dark:bg-[#0b14374d]">
       <div className="ml-[6px]">
@@ -163,9 +168,11 @@ const Navbar = (props) => {
             if (darkmode) {
               document.body.classList.remove("dark");
               setDarkmode(false);
+              localStorage.setItem('darkTheme', false);
             } else {
               document.body.classList.add("dark");
               setDarkmode(true);
+              localStorage.setItem('darkTheme', true);
             }
           }}
         >
