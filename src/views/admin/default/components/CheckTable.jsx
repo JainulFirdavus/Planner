@@ -88,10 +88,10 @@ function CheckTable(props) {
     <Card extra={"w-full h-full sm:overflow-auto px-6"}>
       <header className="relative flex items-center justify-between pt-4">
         <div className="text-xl font-bold text-navy-700 dark:text-white">
-          Check Table
+          ToDo
         </div>
 
-        <CardMenu />
+        <CardMenu nane={'ToDo'}/>
       </header>
 
       <div className="mt-8 overflow-x-scroll xl:overflow-x-hidden">

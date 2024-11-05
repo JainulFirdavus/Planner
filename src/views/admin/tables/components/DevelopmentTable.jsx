@@ -14,7 +14,7 @@ import {
   useReactTable,
 } from "@tanstack/react-table";
 
-function CheckTable(props) {
+function Priority(props) {
   const { tableData } = props;
   const [sorting, setSorting] = React.useState([]);
   let defaultData = tableData;
@@ -127,7 +127,7 @@ function CheckTable(props) {
     <Card extra={"w-full h-full sm:overflow-auto px-6"}>
       <header className="relative flex items-center justify-between pt-4">
         <div className="text-xl font-bold text-navy-700 dark:text-white">
-          Check Table
+        Priority
         </div>
 
         <CardMenu />
@@ -192,5 +192,5 @@ function CheckTable(props) {
   );
 }
 
-export default CheckTable;
+export default Priority;
 const columnHelper = createColumnHelper();

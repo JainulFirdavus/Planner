@@ -19,7 +19,7 @@ function CheckTable(props) {
     columnHelper.accessor("name", {
       id: "name",
       header: () => (
-        <p className="text-sm font-bold text-gray-600 dark:text-white">NAME</p>
+        <p className="text-sm font-bold text-gray-600 dark:text-white">Task</p>
       ),
       cell: (info) => (
         <div className="flex items-center">
@@ -38,7 +38,7 @@ function CheckTable(props) {
       id: "progress",
       header: () => (
         <p className="text-sm font-bold text-gray-600 dark:text-white">
-          PROGRESS
+          Activity
         </p>
       ),
       cell: (info) => (
@@ -51,7 +51,7 @@ function CheckTable(props) {
       id: "quantity",
       header: () => (
         <p className="text-sm font-bold text-gray-600 dark:text-white">
-          QUANTITY
+          Created
         </p>
       ),
       cell: (info) => (
@@ -63,7 +63,7 @@ function CheckTable(props) {
     columnHelper.accessor("date", {
       id: "date",
       header: () => (
-        <p className="text-sm font-bold text-gray-600 dark:text-white">DATE</p>
+        <p className="text-sm font-bold text-gray-600 dark:text-white">Due</p>
       ),
       cell: (info) => (
         <p className="text-sm font-bold text-navy-700 dark:text-white">
@@ -88,7 +88,7 @@ function CheckTable(props) {
     <Card extra={"w-full h-full sm:overflow-auto px-6"}>
       <header className="relative flex items-center justify-between pt-4">
         <div className="text-xl font-bold text-navy-700 dark:text-white">
-          Check Table
+        Reminder
         </div>
 
         <CardMenu />
